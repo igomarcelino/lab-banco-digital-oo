@@ -2,7 +2,7 @@
 public class Main {
 
 	public static void main(String[] args) {
-		Cliente venilton = new Cliente();
+		/*Cliente venilton = new Cliente();
 		venilton.setNome("Venilton");
 		
 		Conta cc = new ContaCorrente(venilton);
@@ -12,7 +12,12 @@ public class Main {
 		cc.transferir(100, poupanca);
 		
 		cc.imprimirExtrato();
-		poupanca.imprimirExtrato();
+		poupanca.imprimirExtrato();*/
+
+		InternetBanking internetBanking = new InternetBanking();
+		internetBanking.cadastrarCliente();
+
 	}
+
 
 }
