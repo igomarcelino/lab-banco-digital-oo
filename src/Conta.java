@@ -42,10 +42,8 @@ public abstract class Conta implements IConta {
 		saldo += valor;
 	}
 
-	@Override
-	public void transferir(double valor, String chavePix) {
 
-	}
+
 
 	public int getAgencia() {
 		return agencia;

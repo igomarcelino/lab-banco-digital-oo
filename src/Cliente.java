@@ -8,6 +8,16 @@ public class Cliente {
 
 	public Cliente() {
 	}
+	public Cliente(String nome) {
+		this.nome = nome;
+	}
+
+	public Cliente(String nome, String cpf, String telefone, String autenticacao) {
+		this.nome = nome;
+		this.cpf = cpf;
+		this.telefone = telefone;
+		this.autenticacao = autenticacao;
+	}
 
 	public String getNome() {
 		return nome;
