@@ -1,3 +1,8 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public abstract class Conta implements IConta {
 	
@@ -8,16 +13,24 @@ public abstract class Conta implements IConta {
 	protected int numero;
 	protected double saldo;
 	protected String chavePix;
-	private String autenticacao;
 	private Cliente cliente;
 
 
-	public Conta(Cliente cliente) {
+
+
+	public String getChavePix() {
+		return chavePix;
+	}
+
+	public  Conta(Cliente cliente) {
+
+	}
+	public void abriConta(Cliente cliente) {
 		this.agencia = Conta.AGENCIA_PADRAO;
 		this.numero = SEQUENCIAL++;
 		this.cliente = cliente;
-
 	}
+
 
 	@Override
 	public void sacar(double valor) {
@@ -30,9 +43,8 @@ public abstract class Conta implements IConta {
 	}
 
 	@Override
-	public void transferir(double valor, IConta contaDestino) {
-		this.sacar(valor);
-		contaDestino.depositar(valor);
+	public void transferir(double valor, String chavePix) {
+
 	}
 
 	public int getAgencia() {
@@ -54,13 +66,17 @@ public abstract class Conta implements IConta {
 		System.out.println(String.format("Saldo: %.2f", this.saldo));
 	}
 
-	public void cadastrarAutenticacao(String autenticacao){
-		this.autenticacao = autenticacao;
+
+
+	public void adicionarChavePix(String chavePix){
+		this.chavePix = chavePix;
 	}
 
-	public void adicionarChavePix(String cpf){
-
+	public Cliente getCliente() {
+		return cliente;
 	}
+
+
 	@Override
 	public String toString() {
 		return "Conta{" +
@@ -68,7 +84,6 @@ public abstract class Conta implements IConta {
 				", numero=" + numero +
 				", saldo=" + saldo +
 				", chavePix='" + chavePix + '\'' +
-				", autenticacao='" + autenticacao + '\'' +
 				", cliente=" + cliente +
 				'}';
 	}

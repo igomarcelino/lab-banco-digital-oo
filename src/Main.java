@@ -15,7 +15,7 @@ public class Main {
 		poupanca.imprimirExtrato();*/
 
 		InternetBanking internetBanking = new InternetBanking();
-		internetBanking.cadastrarCliente();
+		internetBanking.telaPrincipal();
 
 	}
 

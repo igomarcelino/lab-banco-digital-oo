@@ -4,6 +4,18 @@ public class Cliente {
 	private String nome;
 	private String cpf;
 	private String telefone;
+	private String autenticacao;
+
+	public Cliente() {
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
 
 	public String getCpf() {
 		return cpf;
@@ -21,12 +33,12 @@ public class Cliente {
 		this.telefone = telefone;
 	}
 
-	public String getNome() {
-		return nome;
+	public String getAutenticacao() {
+		return autenticacao;
 	}
 
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setAutenticacao(String autenticacao) {
+		this.autenticacao = autenticacao;
 	}
 
 	@Override
@@ -34,12 +46,12 @@ public class Cliente {
 		if (this == o) return true;
 		if (!(o instanceof Cliente cliente)) return false;
 
-		return getCpf() != null ? getCpf().equals(cliente.getCpf()) : cliente.getCpf() == null;
+		return getCpf().equals(cliente.getCpf());
 	}
 
 	@Override
 	public int hashCode() {
-		return getCpf() != null ? getCpf().hashCode() : 0;
+		return getCpf().hashCode();
 	}
 
 	@Override
@@ -48,7 +60,7 @@ public class Cliente {
 				"nome='" + nome + '\'' +
 				", cpf='" + cpf + '\'' +
 				", telefone='" + telefone + '\'' +
+				", autenticacao='" + autenticacao + '\'' +
 				'}';
 	}
-
 }
