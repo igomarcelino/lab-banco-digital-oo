@@ -16,3 +16,10 @@ Permite que você defina uma classe filha que reutiliza (herda), estende ou modi
 
 ### Polimorfismo
 Capacidade de um objeto poder ser referenciado de várias formas, ou seja, é capacidade de tratar objetos criados a partir das classes específicas como objetos de uma classe genérica. Cuidado, polimorfismo não quer dizer que o objeto fica se transformando, muito pelo contrário, um objeto nasce de um tipo e morre daquele tipo, o que pode mudar é a maneira como nos referimos a ele.
+
+### Metodos adicionados ao projeto
+- Criado a classe InternetBank, essa classe fica responsavel por cadastrar o usuario e depois realizar o login do usuario no sistema bancario atraves do cpf do usuario e de uma autenticacao previamente cadastrada
+- Metodos na classe banco, agora a classe banco que chama alguns metodos da classe conta, bem como a classe banco salva os clientes e as contas, como tambem realiza a abertura das contas 
+- Utilizado a clase Scanner para criar uma interacao com o usuario.
+- Criado o metodo popula conta, assim o usuario pode fazer simulacoes de transferencias para contas ja existentes
+- Metodo Transferencia PIX, criado um campo na classe conta como chave pix, sendo assim o banco busca a chave informa e recupera a conta caso exista, assim pode gerar uma transferencia para aquela conta
